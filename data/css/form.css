@@ -1,0 +1,132 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Comforta", sans-serif;
+}
+.date {
+    background: var(--color);
+    padding: 15px;
+    position: relative;
+    font-size: 20px;
+}
+
+.month {
+    background: var(--color);
+    font: 900 75px "Montserrat";
+    text-transform: uppercase;
+    padding: 40px 30px;
+    text-align: center;
+}
+.month--feb {
+    grid-column: span 4;
+}
+.month--title {
+    grid-column: span 6;
+    text-align: right;
+    padding-right: 60px;
+}
+
+.main-content {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-rows: repeat(10, 170px) 80px;
+    grid-template-columns: repeat(7, minmax(170px, 1fr));
+}
+.event__name {
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 20px;
+    height: auto;
+    padding: 10px;
+    margin: 10px;
+    font-size: 14px;
+}
+.event--1 {
+    grid-column: 3/span 2;
+    grid-row: 3;
+}
+.event--2 {
+    grid-column: 4/span 3;
+    grid-row: 3;
+    padding-top: 85px;
+}
+.event--3 {
+    grid-column: 2;
+    grid-row: 6;
+}
+.event--4a {
+    grid-column: 7;
+    grid-row: 7;
+}
+.event--4a .event__name {
+    border-radius: 20px 0 0 20px;
+}
+.event--4b {
+    grid-column: 1/span 2;
+    grid-row: 8;
+}
+.event--4b .event__name {
+    border-radius: 0 20px 20px 0;
+}
+.event--5 {
+    grid-column: 5;
+    grid-row: 9;
+}
+
+div.date:nth-child(15) {
+    grid-column: 3;
+    grid-row: 3;
+}
+div.date:nth-child(16) {
+    grid-column: 4;
+    grid-row: 3;
+}
+div.date:nth-child(17) {
+    grid-column: 5;
+    grid-row: 3;
+}
+div.date:nth-child(18) {
+    grid-column: 6;
+    grid-row: 3;
+}
+div.date:nth-child(34) {
+    grid-column: 2;
+    grid-row: 6;
+}
+div.date:nth-child(46) {
+    grid-column: 7;
+    grid-row: 7;
+}
+div.date:nth-child(47) {
+    grid-column: 1;
+    grid-row: 8;
+}
+div.date:nth-child(48) {
+    grid-column: 2;
+    grid-row: 8;
+}
+div.date:nth-child(58) {
+    grid-column: 5;
+    grid-row: 9;
+}
+.brd{
+    border: solid white 1px;
+}
+.link{
+    margin: auto;
+    text-decoration: none;
+}
+.linkTwo{
+    padding-bottom: 52px;
+    text-decoration: none;
+}
+.date:after {
+    position: absolute;
+    z-index: 20;
+    top: 15px;
+    right: 15px;
+    font-size: 10px;
+    text-transform: uppercase;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
